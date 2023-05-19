@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BOOTSTRAP CSS 5.3.0 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <!-- BOOTSTRAP JS 5.3.0 -->
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <!-- JQUERY 3.6.4 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>>
+    <!-- ARCHIVOS PROPIOS -->
+    <script defer type="module" src="./assets/js/script.js"></script>
+    <link rel="icon" href="./assets/img/calculadora.png">
+    <title>Presupuesto APP</title>
+</head>
+
+<body>
+    <main class="container">
+        <div class="mt-3 d-flex ">
+            <!------------------------------Ingreso Presupuesto  ----------------------------------->
+            <div class=" w-50 border border-success border-3 rounded-2">
+                <form class="p-3 bg-success bg-opacity-25">
+                    <div class="mb-3">
+                        <label for="inputPresupuesto" class="form-label">Ingresa tu presupuesto</label>
+                        <input type="text" class="bg-success bg-opacity-10 form-control" id="inputPresupuesto">
+                    </div>
+                    <button type="submit" class="btn btn-light rounded-3 border border-success border-2 text-success"
+                        id="botonPresupuesto">Calcular</button>
+                </form>
+            </div>
+            <!----------------------------- Fin ingreso presupuesto  ------------------------------>
+
+            <!-------------------------------------- Montos  ------------------------------------->
+            <div class="w-50 d-flex justify-content-evenly text-center">
+                <div>
+                    <h2 class="">Presupuesto</h2>
+                    <h2 class="" id="valorPresupuesto">$ 0</h2>
+                </div>
+                <div>
+                    <h2 class="">Gastos</h2>
+                    <h2 class="" id="valorGastos">$ 0</h2>
+                </div>
+                <div>
+                    <h2 class="">Saldo</h2>
+                    <h2 class="" id="valorSaldo">$ 0</h2>
+                </div>
+            </div>
+            <!------------------------------------- Fin montos  -------------------------------->
+        </div>
+
+
+        <div class="mt-3 d-flex justify-content-evenly">
+            <!-------------------------------- Ingreso gastos  ------------------------------>
+            <div class=" w-50">
+                <form class="p-3 bg-danger bg-opacity-25 border border-danger border-3 rounded-2">
+                    <div class="mb-3">
+                        <label for="inputNombreGasto" class="form-label">Ingresa el nombre del gasto</label>
+                        <input type="text" class="bg-danger bg-opacity-10 form-control" id="inputNombreGasto">
+                        <label for="inputCantidadGasto" class="form-label">Ingresa la cantidad del gasto</label>
+                        <input type="text" class="bg-danger bg-opacity-10 form-control" id="inputCantidadGasto">
+                    </div>
+                    <button type="submit" class="btn btn-light rounded-3 border border-danger border-2 text-danger"
+                        id="botonGasto">Submit</button>
+                </form>
+            </div>
+            <!--------------------------- Fin ingreso gastos ----------------------------------->
+            
+            <!----------------------------------- Tabla  -------------------------------------->
+            <div class="w-50 px-5">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Gasto</th>
+                            <th scope="col">Valor</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+                    </tbody>
+                </table>
+            </div>
+            <!-------------------------------- Fin tabla  ------------------------------------------>
+        </div>
+    </main>
+</body>
+
+</html>
